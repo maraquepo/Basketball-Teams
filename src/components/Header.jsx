@@ -4,7 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 const Header = () => {
   return (
-    <div>
+    <div className="container">
       <div className='Title'>NBA TEAMS</div>
       <div className='searchInput'>
         <input type="text" placeholder="Search team..." />

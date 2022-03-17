@@ -1,0 +1,19 @@
+.tableContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+  border: 1px rebeccapurple solid;
+  margin: 2em 5em;
+
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tableStats {
+  display: flex;
+  justify-content: space-between
+}

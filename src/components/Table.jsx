@@ -1,8 +1,14 @@
 import React from 'react'
+import './Table.css'
+import Button from 'react-bootstrap/Button';
+
 
 const Table = () => {
   return (
-    <div>Table</div>
+    <div className='tableContainer'>
+
+
+    </div>
   )
 }
 
