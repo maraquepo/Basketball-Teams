@@ -39,10 +39,12 @@
 .searchIcon {
   position: absolute;
   top: 8.35rem;
-  left: 7rem;
+  left: 6.5rem;
   height: 60px;
   width: 50px;
   display: grid;
+  background-color: transparent;
+  border: 0;
 
 }
 
