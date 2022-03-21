@@ -6,11 +6,11 @@ const PaginationButtons = ({paginate, pageNumber, setPageNumber}) => {
   const pageNumberArr = [];
 
   const handlePrev = () => {
-      setPageNumber(pageNumber--)
+      setPageNumber(pageNumber - 1)
   }
 
   const handleNext = () => {
-    setPageNumber(pageNumber++)
+    setPageNumber(pageNumber + 1)
 }
 
   for (let i = 1; i <= 5; i++) {
@@ -19,12 +19,12 @@ const PaginationButtons = ({paginate, pageNumber, setPageNumber}) => {
 
   return (
     <Pagination style={{marginRight: 0}} size='lg'>
-      {pageNumber === 0 ? <Pagination.Prev disabled /> : <Pagination.Prev onClick={handlePrev} />}
+      {pageNumber === 0 ? <Pagination.Prev data-testid="prev-pag-button" disabled /> : <Pagination.Prev data-testid="prev-pag-button" onClick={handlePrev} />}
       {pageNumberArr.map(number => {
-        return <Pagination.Item onClick={() => paginate(number - 1)} href='!#'>{number}</Pagination.Item>
+        return <Pagination.Item key={number} data-testid={`button-${number}`}onClick={() => paginate(number - 1)} href='!#'>{number}</Pagination.Item>
       })}
 
-      {pageNumber === 4 ? <Pagination.Next disabled/> : <Pagination.Next onClick={handleNext}/>}
+      {pageNumber === 4 ? <Pagination.Next data-testid="next-pag-button" disabled/> : <Pagination.Next data-testid="next-pag-button" onClick={handleNext}/>}
     </Pagination>
   )
 }

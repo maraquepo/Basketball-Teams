@@ -13,16 +13,22 @@ const Header = () => {
     axios.get(`https://www.balldontlie.io/api/v1/players?search=${searchValue}`)
       .then((data) => {
         setPlayerData(data.data.data)
+        setShow(true)
+        setSearchValue('')
+        console.log('data', data)
       })
-    setShow(true)
-    setSearchValue('')
+      .catch(err => console.error(err))
   }
+
+  console.log('show', show)
+  console.log('searchValue', searchValue)
 
   const handleModal = () => {
     setShow(prev => !prev)
   }
 
   const handleChange = (e) => {
+    e.preventDefault();
     setSearchValue(e.target.value)
   }
 

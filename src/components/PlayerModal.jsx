@@ -18,7 +18,7 @@ const PlayerModal = ({playerData, show, handleModal}) => {
       return ""
     }
   }
-  console.log(playerData)
+  console.log('player', playerData)
 
   return (
     <Modal show={show} onHide={handleModal}>

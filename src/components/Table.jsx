@@ -6,7 +6,6 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import data from '../sample';
 import TableEntries from './TableEntries';
 import PaginationButtons from './PaginationButtons';
-import sample from '../sample';
 
 const Table = () => {
   let sampleData = data.data;
