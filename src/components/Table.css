@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: flex-start;
   text-align: center;
-  height: 500px;
   margin: 0 5.7rem;
 
 }
@@ -26,4 +25,10 @@
 .tableData:hover .card{
   background-color: pink;
   cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.5rem 5.7rem;
 }
