@@ -15,7 +15,7 @@ const PlayerModal = ({playerData, show, handleModal}) => {
     } else if (position === "G") {
       return "Guard"
     } else {
-      return null
+      return ""
     }
   }
   console.log(playerData)
