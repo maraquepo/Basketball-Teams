@@ -13,15 +13,11 @@ const Header = () => {
     axios.get(`https://www.balldontlie.io/api/v1/players?search=${searchValue}`)
       .then((data) => {
         setPlayerData(data.data.data)
-        setShow(true)
-        setSearchValue('')
-        console.log('data', data)
       })
-      .catch(err => console.error(err))
+      setShow(true)
+      setSearchValue('')
   }
 
-  console.log('show', show)
-  console.log('searchValue', searchValue)
 
   const handleModal = () => {
     setShow(prev => !prev)
@@ -37,7 +33,7 @@ const Header = () => {
       <div className='Title'>NBA TEAMS</div>
       <form onSubmit={handleSubmit}>
       <div className='searchInput'>
-        <input type="text" placeholder="Search NBA player..." value={searchValue} onChange={handleChange}/>
+        <input type="text" placeholder="Search NBA player..." value={searchValue} onChange={handleChange} data-testid="input"/>
           <button type="submit" className="searchIcon">
             <SearchIcon/>
           </button>

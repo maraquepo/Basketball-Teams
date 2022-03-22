@@ -25,7 +25,7 @@ const PlayerModal = ({playerData, show, handleModal}) => {
       {playerData &&
       <div>
         <Modal.Header closeButton>
-          <Modal.Title>{`${playerData.first_name} ${playerData.last_name}`}</Modal.Title>
+          <Modal.Title data-testid="player-name">{`${playerData.first_name} ${playerData.last_name}`}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="playerInfo">

@@ -47,7 +47,7 @@ const TableEntries = ({teamData}) => {
   return (
     <div>
       <CardGroup className='tableData' onClick={handleModal}>
-        <Card body>{name}</Card>
+        <Card body data-testid={`team-${name}`}>{name}</Card>
         <Card body>{city}</Card>
         <Card body>{abbreviation}</Card>
         <Card body>{conference}</Card>

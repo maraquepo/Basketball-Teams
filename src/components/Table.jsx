@@ -11,7 +11,7 @@ const Table = () => {
   let sampleData = data.data;
 
   const [teams, setTeams] = useState(sampleData)
-  const [isUp, setIsUp] = useState(false);
+  const [isUp, setIsUp] = useState(true);
   const [pageNumber, setPageNumber] = useState(0)
 
   const teamsPerPage = 7
@@ -45,8 +45,8 @@ const Table = () => {
     <>
       <div className='tableContainer'>
         <CardGroup className='tableTitles'>
-          <Card body>Team Name</Card>
-          <Card body>
+          <Card data-testid="Team Name" body>Team Name</Card>
+          <Card data-testid="City" body>
             City
             {isUp ? (
               <ArrowDropUpIcon onClick={handleSort} style={{ cursor: 'pointer' }} />
@@ -54,9 +54,9 @@ const Table = () => {
               <ArrowDropDownIcon onClick={handleSort} style={{ cursor: 'pointer' }} />
             )}
           </Card>
-          <Card body>Abbreviation</Card>
-          <Card body>Conference</Card>
-          <Card body>Division</Card>
+          <Card data-testid="Abbreviation" body>Abbreviation</Card>
+          <Card data-testid="Conference" body>Conference</Card>
+          <Card data-testid="Division" body>Division</Card>
         </CardGroup>
         {currentPage}
       </div>
