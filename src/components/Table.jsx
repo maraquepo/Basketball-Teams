@@ -16,12 +16,12 @@ const Table = () => {
   const pagesVisited = pageNumber * teamsPerPage;
   const numberOfTeams = teams.length;
 
+  // Fetchs all teams
   const fetchTeams = () => {
-    axios.get('https://www.balldontlie.io/api/v1/teams')
-      .then((data) => {
-        setTeams(data.data.data)
-      })
-  }
+    axios.get('https://www.balldontlie.io/api/v1/teams').then((data) => {
+      setTeams(data.data.data);
+    });
+  };
 
   const currentPage = teams.slice(pagesVisited, pagesVisited + teamsPerPage).map((team) => {
     return <TableEntries teamData={team} key={team.id} />;
@@ -33,7 +33,7 @@ const Table = () => {
 
   const paginate = (number) => setPageNumber(number);
 
-
+  // Handles sorting of team cities alphabetically and reverse
   const sortedData = teams.sort((a, b) => {
     return a.city > b.city ? 1 : -1;
   });
@@ -45,8 +45,8 @@ const Table = () => {
   }
 
   useEffect(() => {
-    fetchTeams()
-  },[])
+    fetchTeams();
+  }, []);
 
   return (
     <>

@@ -9,8 +9,12 @@ const Header = () => {
   const [playerData, setPlayerData] = useState('')
   const [show, setShow] = useState(false)
 
+  console.log('show', show)
+  console.log('s',searchValue)
+  console.log('player data',playerData)
   // makes GET request to player API endpoint, grabs data of player, opens modal, and clears input field
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
     axios.get(`https://www.balldontlie.io/api/v1/players?search=${searchValue}`)
       .then((data) => {
         setPlayerData(data.data.data)
@@ -18,7 +22,6 @@ const Header = () => {
       setShow(true)
       setSearchValue('')
   }
-
 
   // toggles visablity of player modal
   const handleModal = () => {

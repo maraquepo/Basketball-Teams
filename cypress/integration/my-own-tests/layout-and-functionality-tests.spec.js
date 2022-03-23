@@ -10,7 +10,7 @@ describe('Tests for Alkira Take Home', () => {
     cy.get('[data-testid=button-2]').as('buttonTwo');
     cy.get('[data-testid=button-3]').as('buttonThree');
     cy.get('[data-testid=button-4]').as('buttonFour');
-    cy.get('[data-testid=button-5]').as('buttonFive');
+    cy.get('[data-testid="button-5"]').as('buttonFive')
     cy.get('[data-testid=next-pag-button]').as('buttonNext');
   });
 
@@ -29,14 +29,10 @@ describe('Tests for Alkira Take Home', () => {
       cy.get('form').should('exist');
     });
 
-    it('Displays 7 teams on the first 4 pages', () => {
+    it('Displays 7 teams on main page', () => {
       cy.get(':nth-child(n+1) > .tableData').should('have.length', 7);
       cy.get('@buttonTwo').click().get(':nth-child(n+1) > .tableData').should('have.length', 7);
       cy.get('@buttonThree').click().get(':nth-child(n+1) > .tableData').should('have.length', 7);
-    });
-
-    it('Displays 2 teams on the last page', () => {
-      cy.get('@buttonFive').click().get(':nth-child(n+1) > .tableData').should('have.length', 2);
     });
 
     for (const property of properties) {
@@ -120,12 +116,13 @@ describe('Tests for Alkira Take Home', () => {
       cy.wait('@lebronFixture').its('request.url').should('contain', 'search=Lebron')
     })
 
-    it.only('should render correct data to page', () => {
+    it('should render NBA player details', () => {
       cy.intercept('https://www.balldontlie.io/api/v1/players?search=Lebron', {fixture: 'lebron'}).as('lebronFixture')
       cy.get('[data-testid="input"]').type('Lebron {enter}')
-      cy.get('.modal-content')
+      cy.get('.modal-content').should('contain', 'LeBron James')
 
     })
+
 
   })
 

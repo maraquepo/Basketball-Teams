@@ -25,6 +25,9 @@
   color: white;
   font-weight: 700;
   border-radius: 5px;
+  @media screen and (max-width: 600px) {
+    height: 5rem;
+  }
 
 }
 
@@ -46,12 +49,21 @@
   @media screen and (max-width: 600px) {
     width: 100%;
     margin: 0;
+    height: 9.5rem;
   }
 }
 
 .tableData:hover .card{
   background-color: lightblue;
   cursor: pointer;
+}
+
+.card-body {
+  @media screen and (max-width: 600px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .pagination {
