@@ -1,0 +1,102 @@
+.tableContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: center;
+  margin: 0 5.7rem;
+}
+
+@media screen and (max-width: 600px) {
+  .tableContainer {
+    width: 550px;
+  }
+}
+
+.tableTitles {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media screen and (max-width: 600px) {
+  .tableTitles {
+    font-size: 0.94rem;
+  }
+}
+
+.tableTitles .card {
+  background-color: #074684;
+  color: white;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.tableData {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media screen and (max-width: 600px) {
+  .tableData {
+    font-size: 0.79rem;
+  }
+}
+
+.tableData .card {
+  margin-top: 0.5rem;
+  border: none;
+  background-color: #F8FBFD;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 600px) {
+  .tableData .card {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.tableData:hover .card {
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .pagination {
+    margin: auto;
+  }
+}
+/*# sourceMappingURL=Table.css.map */

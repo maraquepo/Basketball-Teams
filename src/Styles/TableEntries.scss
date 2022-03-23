@@ -1,0 +1,57 @@
+.modal-dialog {
+  position: absolute !important;
+  right: 0;
+  top: 0;
+  width:31% !important;
+  @media screen and (max-width: 600px) {
+    width: 50% !important;
+  }
+  height: 100%;
+  margin-top: 0 !important;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #000;
+
+}
+
+.modal-content {
+  height: 100%;
+}
+
+.modal-header {
+  padding-left: 2rem;
+  background-color: lightgrey;
+}
+
+.allContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 1em;
+  row-gap: 2em;
+  margin-top: 1em;
+}
+
+.randomGame {
+  font-weight: 800;
+  margin-top: 2em;
+}
+
+.gameData {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 1rem;
+  margin-top: 2rem;
+  row-gap: 2em;
+}

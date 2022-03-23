@@ -1,4 +1,4 @@
-import './App.css';
+import './Styles/App.scss';
 import Header from './components/Header';
 import Table from './components/Table';
 
