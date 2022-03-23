@@ -9,9 +9,6 @@ const Header = () => {
   const [playerData, setPlayerData] = useState('')
   const [show, setShow] = useState(false)
 
-  console.log('show', show)
-  console.log('s',searchValue)
-  console.log('player data',playerData)
   // makes GET request to player API endpoint, grabs data of player, opens modal, and clears input field
   const handleSubmit = (e) => {
     e.preventDefault()
