@@ -3,6 +3,7 @@ import { Modal } from 'react-bootstrap';
 import '../Styles/PlayerModal.css';
 
 const PlayerModal = ({ playerData, show, handleModal }) => {
+
   // API returns positions as abbreviations, this function converts it to the position's full name
   const positionConverter = (position) => {
     if (position === 'C') {
